@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HW_200121_</title>
+		<script>
+			function sizePic() {
+				size = document.getElementById("size").value;
+				img = document.getElementById("pic");
+				img.width = 20 + 10*size;
+			}
+		</script>
+		<style>
+			fieldset{
+				width: 275px;
+				height: 125px;
+				padding: 10px 10px;
+				margin: 0;
+			}
+
+			fieldset:nth-child(odd){
+				float: left;
+			}
+		</style>
+</head>
+<body>
+	<form>
+		<fieldset>
+			 <select name="select" >
+			 <option selected value="s1" >Вариант№1</option>
+			 <option value="s2">Вариант№2</option>	
+			 <option value="s3">Вариант№3</option>	
+			 <option value="s4">Вариант№4</option>		
+			</select>
+			<input type="submit" name="Отправить">
+		</fieldset>
+	</form>
+	<form>
+		<fieldset>
+			<select name="select" size="4" multiple>
+			 <option selected value="s1" >Вариант№1</option>
+			 <option value="s2">Вариант№2</option>	
+			 <option value="s3">Вариант№3</option>	
+			 <option value="s4">Вариант№4</option>		
+			</select>
+			<input type="submit" name="Отправить">
+		</fieldset>
+	</form>
+	<form>
+		<fieldset>
+			<label>Укажите цифру:</label>
+			<p><input type="number" name="num" pattern="[0-9]"></p>
+			<input type="submit" name="Отправить">
+		</fieldset>
+	</form>
+	<form>
+		<fieldset>
+			<select name="select" size="1" >
+			 <option selected value="s1" disabled>Вариант№1</option>
+			</select>
+		</fieldset>
+	</form>
+	<form>
+		<fieldset>
+			<label>Укажите цифру:<input type="range" min="1" max="5" id="size" oninput="sizePic()" value="3"></label>
+			<p><img src="img/vinni.png" width="10%" height="10%" alt="" id="pic"></p>
+		</fieldset>
+	</form>
+	<form>
+		<fieldset>
+			<p><input type="reset" name="Очистить"></p>
+		</fieldset>
+	</form>
+	<form>
+		<fieldset>
+			<label><input type="search" name="q" placeholder="Поиск по сайту">
+			<input type="submit" value="Найти"></label>
+		</fieldset>
+	</form>
+	<form>
+		<fieldset>
+			<label>Укажите цвет фона: <input type="color" name="bg" value="#ff0000">
+			<input type="submit" name="Выбрать"> </label>
+		</fieldset>
+	</form>
+	<form>
+		<fieldset>
+			<label><b>Вопрос?</b></label><br>
+			<input type="radio" name="answer" value="a1">Ответ_1<br>
+			<input type="radio" name="answer" value="a2">Ответ_2<br>
+			<input type="radio" name="answer" value="a3">Ответ_3<br>
+			<input type="submit" name="Отправить">
+		</fieldset>
+	</form>
+	<form>
+		<fieldset>
+			<label><b>Введите ваш отзыв:</b></label><br>
+			<textarea name="comment"></textarea><br>
+			<input type="submit" name="Отправить">
+		</fieldset>
+	</form>
+	<form>
+		<fieldset>
+			<label><b>Год?</b></label><br>
+			<input type="checkbox" name="answer" value="a1">2014<br>
+			<input type="checkbox" name="answer" value="a2">2015<br>
+			<input type="checkbox" name="answer" value="a3">2016<br>
+			<input type="checkbox" name="answer" value="a3">2007<br>
+			<input type="submit" name="Отправить">
+		</fieldset>
+	</form>
+	<form enctype="multipart/form-data" method="post">
+		<fieldset>
+			<label>Загрузите ваши фотографии на сервер</label>
+			<p><input type="file" name="photo" multiple accept="img/*"></p>
+			<input type="submit" name="Отправить">
+		</fieldset>
+	</form>
+</body>
+</html>
+		
