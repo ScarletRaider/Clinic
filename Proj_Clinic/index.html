@@ -5,40 +5,54 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>ЕЦЗ</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header >
-        <div>
-            <ul>
-            	<li><a href="#">Единый центр записи</a></li>
-                <li><a href="#">Главная</a></li>
-                <li><a href="#">Услуги</a></li>
-                <li><a href="#">Контакты</a></li>
-                <li><a href="#">Отзывы</a></li>
-                <li><a href="#"><img src="img/call.png" height="24" width="24">+380 56 59 59</a></li>
-            </ul>
+    <header class="header" id="header">
+        <div class="container">
+        	<div class="header_box">
+        		<div class="header_logo">
+        			<img src="img/Logo (1).png" alt="">
+        			<img src="img/Единый Центр Записи.png" alt="">
+        		</div>
+	            <nav class="nav" id="nav">
+	                <a class="nav_link" href="#">Главная</a>
+	                <a class="nav_link" href="#">Услуги</a>
+	                <a class="nav_link" href="#">Контакты</a>
+	                <a class="nav_link" href="#">Отзывы</a>
+	                <a class="nav_phone" href="#"><img src="img/иконка телефона.png"></a>
+	                <a class="nav_phone_number" href="#">+380 56 59 59</a>         
+	            </nav>
+            </div>
         </div>
     </header>
-    	<div>
-    		<p>Консультация и запись!</p>
-    		<p>Всю необходимую информацию о том, как 
-			и в каком центре сделать МРТ, КТ и рентген
-			исследованиях, сравнить интересующие Вас
-			клиники, цены на диагностику и порядок
-			прохождения процедур, а также записаться
-			на исследование с помощью нашего сервиса.</p>
-			<button>Заказать звонок</button>
-    	</div>
-    	<div>
-    		<p>Выберите исследование:</p>
-    		<form action="#">
-                <input type="search" name="mrt_search" placeholder="Например: МРТ пазух носа">
-            </form>
-            <p>Выберите город:</p>
-    		<form action="#">
-                <input type="search" name="mrt_city" placeholder="Например: Днепр">
-            </form>
-			<p>Сортировать по:<button>по цене</button> <button>по рейтенгу</button></p>
+
+    <!--Intro-->
+	<div class="intro " id="intro">
+		<div class="container">
+			<div class="intro-inner">
+				<img src="img/Mask Group.png" class="mask_intro">
+				<img src="img/play.png" class="play_intro">
+				<h1 class="intro_title">Консультация и запись!</h1>
+				<h2 div class="intro-subtitle">Всю необходимую информацию о том, как и в каком центре сделать МРТ, КТ и рентген исследованиях, сравнить интересующие Вас клиники, цены на диагностику и порядок прохождения процедур, а также записаться на исследование с помощью нашего сервиса.</h2>
+				<a class="btn  btn--blue" href="#">Заказать звонок</a>
+			</div>
+		</div>
+	</div>
+
+    <!--<div class="container">
+	    	<div class="search" id="search">
+	    		<p>Выберите исследование:</p>
+		    		<form action="#">
+		                <input type="search" name="mrt_search" placeholder="Например: МРТ пазух носа">
+		            </form>
+		            	<p>Выберите город:</p>
+		    		<form action="#">
+		                <input type="search" name="mrt_city" placeholder="Например: Днепр">
+		            </form>
+				<p>Сортировать по:<button>по цене</button> <button>по рейтенгу</button></p>
+			</div>
     	</div>
     <section>
         <div>
@@ -167,6 +181,7 @@
                 </label>
                 <button>Отправить</button>
             </form>
-    </footer>
+    </footer>-->
+
 </body>
 </html>
