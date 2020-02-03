@@ -8,6 +8,20 @@ body{
 	box-sizing: border-box;
 }
 
+p, pre{
+	margin: 0 0 10px 0;
+}
+
+a{
+	transition:  opacity .1s linear;
+	color: #02457A;
+}
+
+a:hover {
+	color: #0686EC;
+}
+
+
 /* Container
 ===================*/
 .container {
@@ -86,35 +100,25 @@ body{
 ===================*/
 
 .intro{
-	position: absolute;
-	top: 60px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	position: relative;
+	top: 60px;
 	height: 655px;
 	width: 100%;
-
-	
-	background-blend-mode: multiply;
-	background-image: url("img/richard-catabay-05kHY7AYCp8-unsplash.jpg");
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-color: rgba(0, 27, 72, .64);
+	z-index: 4;
+	overflow: hidden;
+	margin-bottom: 25px;
 }
 
-.play_intro{
-	position: relative;
-	width: 64px;
-	height: 64px;
-	left: 965px;
-	top: 125px;
-}
-
-.mask_intro{
+.video_inner{
 	position: absolute;
-	top: -58px;
-	right: 0;
+	top:0;
+    left:0;
+	width: 100%;
+	background-size: cover;
+	z-index: -100;
 }
 
 .intro-inner{
@@ -124,6 +128,7 @@ body{
 }
 
 .intro_title{
+
 	margin: 0 0 15px 0;
 	font-family: 'Lora', serif;
 	color: #fff;
@@ -142,15 +147,60 @@ body{
 	text-align: left;
 	width: 387px;
 	height: 144px;
-	left: 221px;
-	top: 303px;
-
 	margin-bottom: 25px;
 }
 
 
 /* Btn
 ===================*/
+.btn_callback {
+	display: inline-block;
+    vertical-align: top;
+	
+	height: 36px;
+    border-radius: 2px;
+    border: 0;
+    cursor: pointer;
+    padding: 9px 42px;
+
+    font-family: Verdana;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 19px;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+
+    transition: background .3s linear;
+}
+
+.btn_clicnic_item {
+	display: inline-block;
+    vertical-align: top;
+    padding: 10px;
+    float: right;
+	
+	margin-top: -38px;
+    border-radius: 2px;
+    border: 0;
+    cursor: pointer;
+
+    font-family: Verdana;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 19px;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+
+    transition: background .3s linear;
+}
 
 .btn {
 	display: inline-block;
@@ -187,5 +237,504 @@ body{
 ===================*/
 
 .search{
-	margin-top: 75px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	position: absolute;
+	margin:100px 150px 50px;
+	background-color: #02457A;
+	box-shadow: 3px 4px 8px rgba(6, 86, 150, 0.32); 
+	width: 900px%;
+}
+
+.search_box{
+	padding: 25px 20px;
+	width: 420px;
+}
+
+.search_title{
+	font-family: Verdana;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 19px;
+	color: #fff;
+	
+	padding: 0 0 12px 0;
+	margin: 0;
+
+}
+
+input.mrt_search[type="search"] {
+	width: 385px;
+	height: 35px;
+	padding: 10px;
+
+	font-family: Verdana;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 17px;
+	color: #C9C9C9;
+}
+
+input.mrt_city[type="search"] {
+	width: 385px;
+	height: 35px;
+	padding: 10px;
+
+	font-family: Verdana;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 17px;
+	color: #C9C9C9;
+}
+
+/* Search_change
+===================*/
+
+.search_change{
+	display: flex;
+	flex-direction: column;
+	margin: 275px 0 0 0;
+	padding: 0;
+
+	font-family: Verdana;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 19px;
+
+	color: #272829;
+}
+
+.search_button{
+	font-family: Verdana;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 19px;
+	text-align: center;
+
+	color: #FFFFFF;
+	background: #02457A;
+	border: 2px solid #02457A; 
+	box-shadow: 3px 4px 8px rgba(6, 86, 150, 0.32); 
+	transition-duration: 0.6s;
+
+}
+
+.search_button:hover {
+	background-color: #fff; /* Green */
+	color: #000;
+	box-shadow: 3px 4px 8px rgba(6, 86, 150, 0.1); 
+
+}
+
+/* Clinic_list
+===================*/
+
+.clinics{
+	margin: 30px 0 70px;
+}
+
+.clinic_list{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -15px;
+	
+}
+
+.clinic_list_item{
+	width: 49.3%;
+	height: 245px;
+	background: #FFFFFF;
+	box-shadow: 2px 4px 8px rgba(201, 201, 201, 0.16);
+	padding: 15px;
+	margin-bottom: 30px;
+}
+
+.clinic_list_item:nth-child(2n+1){
+	margin-right: auto;
+}
+
+.star{
+	font-family: Lora;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 20px;
+
+	color: #5A5D60;
+	float: right;
+}
+
+.clinic_image{
+	float: left;
+	margin-right: 12px;
+}
+
+.clinic_list_title{
+	margin: 0;
+	font-family: Lora;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 26px;
+	color: #272829;
+	margin-bottom: 10px;
+}
+
+.clinic_list_subtitle{
+	margin: 0;
+
+	font-family: Verdana;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 19px;
+}
+
+.clinic_list_price{
+	font-family: Verdana;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 19px;
+}
+
+.price{
+	font-family: Verdana;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 19px;
+	color: #272829;
+
+	width: 100%;
+	border-spacing: 0;
+	margin-bottom: 20px;
+}
+
+table.price td{
+	width: 50%;
+	vertical-align: top; 
+}
+
+td.rightcol{
+	text-align: right;
+	font-family: Verdana;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 19px;
+
+	color: #272829;
+}
+
+.title_callback{
+	font-family: Verdana;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 19px;
+
+	color: #272829;
+}
+
+/* Callback_box
+===================*/
+
+.callback_box{
+	display: flex;
+	align-items: flex-end;
+	height: 279px;
+	width: 100%;
+	margin-bottom: 85px;
+}
+
+.rectangle_callback_box{
+	position: absolute;
+	width: 100%;
+	height: 191px;
+	background-color: #02457A;
+
+}
+
+.img_doc1{
+	margin-left: -125px;
+	z-index: 2;
+}
+
+.img_doc2{
+
+	margin-left: 150px;
+	z-index: 3;
+}
+
+.callback_title_box{
+	margin: 50px 0 50px 250px;
+	text-align: center;
+	z-index: 100;
+}
+
+h2.callback_title{
+	margin-bottom: 10px;
+	margin-left: -530px;
+
+	font-family: Lora;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 36px;
+	line-height: 46px;
+	font-weight: 400;
+
+
+	color: #FFFFFF;
+}
+
+input.name_callbox[type="name"] {
+	width: 280px;
+	height: 35px;
+	padding: 10px;
+
+	font-family: Verdana;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 17px;
+	color: #272829;
+	margin-right: 24px;
+}
+
+input.tel_callbox[type="tel"] {
+	width: 280px;
+	height: 35px;
+	padding: 10px;
+
+	font-family: Verdana;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 17px;
+	color: #272829;
+	margin-right: 24px;
+}
+
+/* Comment
+===================*/
+
+.comment{
+	display: flex;
+	justify-content: space-between;
+	height: 350px;
+	width: 100%;
+	margin-bottom: 90px;
+}
+
+.comment_title{
+	font-family: Lora;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 36px;
+	line-height: 46px;
+
+	color: #272829;
+}
+
+.comment_inner{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -15px;
+}
+
+.comment_items{
+	width: 30%;
+	padding: 5px;
+	margin-right: auto;
+}
+
+.comment_img{
+	margin-bottom: 18px;
+}
+
+.comment_subtitle{
+	text-align: justify;
+	font-family: Verdana;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 24px;
+	height: 144px;
+
+	color: #575757;
+}
+
+.blockquote_box{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+.comment_blockquote{
+	float: right;
+	margin: 20px 0 4px 0;
+
+
+	font-family: Verdana;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 24px;
+
+	color: #272829;
+}
+
+.comment_blockquote_date{
+	float: right;
+	margin: 0;
+
+
+	font-family: Verdana;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 24px;
+
+	text-align: center;
+
+	color: #AAAAAA;	
+}
+
+/* Footer
+===================*/
+footer{
+	width: 100%;
+	height: 375px;
+	background-color: #02457A
+}
+
+.footer_inner{
+	display: flex;
+	flex-direction: row;
+}
+
+.footer_items{
+	width: 25%;
+	display: flex;
+	flex-direction: column;
+	height: 45px;
+	margin-top: 70px;
+}
+
+.logobox{
+	display: flex;
+	flex-direction: row;
+}
+
+.logo_footer{
+	margin-right: 25px;
+}
+
+h4.service_footer_title{
+	
+	margin: 0 0 14px 0;
+	font-family: Lora;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 26px;
+	
+	color: #FFFFFF;
+}
+
+.service_footer_list{
+	margin-bottom: 16px;
+	text-decoration: none;
+	font-family: Verdana;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 19px;
+
+	color: #FFFFFF;
+}	
+
+.contact_information_footer_title{
+	font-family: Verdana;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 19px;
+
+	color: #FFFFFF;
+}
+
+.contact_information_footer_img{
+	font-family: Verdana;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 19px;
+
+	color: #FFFFFF;
+	margin-right: 15px;
+
+}
+
+input.footer_name_box[type="text"] {
+	width: 282px;
+	height: 36px;
+
+	margin-bottom: 16px;
+	padding: 10px;
+	font-family: Verdana;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 17px;
+
+	color: #AAAAAA;
+}
+
+input.footer_tel_box[type="tel"] {
+	width: 282px;
+	height: 36px;
+
+	margin-bottom: 16px;
+	padding: 10px;
+	font-family: Verdana;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 17px;
+
+	color: #AAAAAA;
+}
+
+input.footer_text_box[type="text"] {
+	width: 282px;
+	height: 36px;
+
+	margin-bottom: 16px;
+	padding: 10px;
+	font-family: Verdana;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 17px;
+
+	color: #AAAAAA;
+}
+
+/* Media
+===================*/
+
+@media (max-width: 1440px){
+
+	/* Callback_box*/
+	.img_doc2{
+	margin-left: 60px;
+	}
 }
