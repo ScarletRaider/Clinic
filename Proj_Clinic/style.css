@@ -231,6 +231,7 @@ a:hover {
 
 .btn--blue:hover {
     background-color: #045fa9;
+    color: #fff;
 }
 
 /* Search
@@ -464,13 +465,13 @@ td.rightcol{
 
 .img_doc1{
 	margin-left: -125px;
-	z-index: 2;
+	z-index: 3;
 }
 
 .img_doc2{
 
 	margin-left: 150px;
-	z-index: 3;
+	z-index: 2;
 }
 
 .callback_title_box{
@@ -560,7 +561,6 @@ input.tel_callbox[type="tel"] {
 }
 
 .comment_subtitle{
-	text-align: justify;
 	font-family: Verdana;
 	font-style: normal;
 	font-weight: normal;
