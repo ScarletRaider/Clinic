@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS</title>
+	<script>
+		function FirstTask(){
+			var faq = prompt("Каково 'официальное' название JavaScript?","");
+			if (faq == 'EcmaScript') {
+				alert("Верно!");
+			} else {
+				alert("Не знаете? 'EcmaScript'!");
+			}
+		}
+
+		function SecondTask(){
+			var faq_double = prompt("Введите число","");
+			if (faq_double == 0){
+				alert("0");
+			} else if(faq_double > 0){
+				alert("1");
+			} else if(faq_double < 0){
+				alert("-1");
+			}
+		}
+
+		function ThirdTask(){
+			var faq_third = prompt("Кто пришел?","");
+			if (faq_third == "Админ") {
+				var faq_third_sec = prompt("Пароль?", "");
+				if (faq_third_sec == "Черный властелин") {
+					alert("Добро Пожаловать!");	
+				} else if (faq_third_sec = false) {
+				alert("Вход Отменен");
+				} else {
+					alert("Не правильный пароль");
+				}
+			} else if (faq_third = false) {
+				alert("Вход Отменен");
+			}
+			else {
+				alert("Я вас не знаю");
+			}
+		}
+	</script>
+</head>
+<body>
+	<input type="button" onclick="FirstTask()" value="First task">
+	<input type="button" onclick="SecondTask()" value="Second task">
+	<input type="button" onclick="ThirdTask()" value="Third task">
+</body>
+</html>
