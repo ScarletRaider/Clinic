@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS</title>
+	<script>
+		function FirstTask(){	
+				do {
+				var answer = prompt("Введите число > 100?", "");
+				} while (answer <= 100 && answer);
+		}
+
+		function SecondTask(){
+			var i = 0;
+			do{
+				alert("номер : " + i + "!");
+				i ++;
+			} while(i < 3);
+		}
+
+		var elem = document.querySelector("text");
+	</script>
+</head>
+<body>
+	<input type="button" onclick="FirstTask()" value="First task">
+	<input type="button" onclick="SecondTask()" value="Second task">
+	 <input type="button" id="hider" value="Нажмите, чтобы спрятать текст" />
+  	<div id="text">Текст</div>
+</body>
+</html>
