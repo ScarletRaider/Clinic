@@ -17,13 +17,24 @@
 			} while(i < 3);
 		}
 
-		var elem = document.querySelector("text");
+	
 	</script>
 </head>
 <body>
 	<input type="button" onclick="FirstTask()" value="First task">
 	<input type="button" onclick="SecondTask()" value="Second task">
-	 <input type="button" id="hider" value="Нажмите, чтобы спрятать текст" />
+	 <button id="hide">Нажмите, чтобы спрятать текст</button>
   	<div id="text">Текст</div>
+  	<script
+	  src="https://code.jquery.com/jquery-3.4.1.min.js"
+	  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+	  crossorigin="anonymous"></script>
+	 <script>
+	 		$(function(){
+			$('button#hide').click(function(){
+				$('#text').toggle("slow");
+			});
+		});
+	 </script>
 </body>
 </html>
